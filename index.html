@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maryam Sherif Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16191F;--soft:#5E6671;--taupe:#B3AFA9;--line:#E6E8EB;--gut:max(24px,calc((100vw - 1040px)/2))}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:#fff;color:var(--ink);font:400 16px/1.8 'Inter',sans-serif;-webkit-font-smoothing:antialiased;padding-top:env(safe-area-inset-top,0px)}
+h1,h2,h3{font-family:'Inter',sans-serif;font-weight:600;letter-spacing:-.025em;margin:0}
+a{color:inherit}
+.nav{position:sticky;top:16px;z-index:10;max-width:820px;margin:16px auto 0;background:rgba(246,246,247,.9);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;display:flex;align-items:center;justify-content:space-between;padding:12px 28px 12px 16px}
+.logo{position:relative;display:flex;align-items:center;font-weight:600;text-decoration:none;letter-spacing:-.01em;padding-left:2px}
+.logo i{position:absolute;left:0;top:50%;width:34px;height:34px;margin-top:-17px;border-radius:50%;background:linear-gradient(90deg,#111,#ccc)}
+.logo span{position:relative;margin-left:18px}
+.nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0;font-size:14px}
+.nav ul a{text-decoration:none;color:var(--soft)}.nav ul a:hover{color:var(--ink)}
+.nav svg{width:20px;height:20px;display:block}
+.page{margin:-76px 0 0;background:#fff}
+.hero{background:#F6F6F6;text-align:center;padding:230px 24px 240px}
+.hero h1{font-size:clamp(40px,7vw,64px);line-height:1.1}
+.hero p{font-size:17px;color:var(--soft);margin:16px 0 56px}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:15px 44px;font:500 14px 'Inter',sans-serif;letter-spacing:.03em;text-decoration:none}
+.btn:hover{background:#000}
+.about{position:relative;overflow:hidden;background:var(--taupe);padding:190px 0 180px}
+.blob{position:absolute;border:4px solid rgba(255,240,222,.55);background:linear-gradient(135deg,rgba(255,255,255,.28),rgba(0,0,0,.06));box-shadow:inset 0 0 40px rgba(255,255,255,.25)}
+.b1{width:420px;height:330px;left:60px;top:-40px;border-radius:55% 45% 60% 40%/50% 60% 40% 50%}
+.b2{width:560px;height:300px;right:-120px;bottom:-110px;border-radius:50% 50% 45% 55%/60% 45% 55% 40%}
+.about .in{position:relative;max-width:640px;margin-left:var(--gut);margin-right:24px}
+.about h2{font-size:36px;margin-bottom:32px}.about p{margin:0;font-size:16px;line-height:1.95}
+section.pad{padding:170px var(--gut)}
+.two{display:grid;grid-template-columns:1fr 1.7fr;gap:90px}
+.two h2{font-size:36px;line-height:1.25}
+.row{display:grid;grid-template-columns:130px 1fr;gap:24px;margin-bottom:72px}.row:last-child{margin-bottom:0}
+.row b{font-weight:500;font-size:13px;color:var(--soft)}.row h3{font-size:15px;font-weight:600;letter-spacing:0}
+.row small{display:block;font-size:12px;color:var(--soft);text-transform:uppercase;letter-spacing:.04em;margin:8px 0 18px;line-height:1.7}
+.row p{margin:0;font-size:15px;color:var(--soft);line-height:1.85}
+.pre{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--soft);margin-bottom:16px}
+.skills h2{font-size:36px;line-height:1.25;margin-bottom:90px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:100px}
+.cols h4{font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin:0 0 30px}
+.cols p{margin:0 0 6px;font-size:15px;color:var(--soft)}.cols p+p{margin-top:26px}
+.bar{height:10px;background:#E4E1DD;margin:10px 0 28px;max-width:320px}.bar span{display:block;height:100%;background:var(--ink)}
+.work{background:#2B2E33;color:#fff;padding:170px var(--gut);text-align:center}
+.work h2{font-size:36px;margin-bottom:96px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:90px}
+.shot{width:100%;max-width:460px;aspect-ratio:3/2;margin:0 auto 38px;background:#40444B;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.cards h3{font-size:17px;margin-bottom:12px}.cards p{margin:0 0 18px;font-size:14.5px;color:#C9CCD1;line-height:1.8}
+.cards a{font-size:13px;margin:0 10px}
+.reach{background:#000;color:#fff;padding:170px var(--gut)}
+.reach h2{font-size:34px;margin-bottom:56px}.reach h3{font-size:18px;margin-bottom:12px}
+.reach p{margin:0 0 6px;font-size:15px;color:#D5D7DB}
+.reach small{display:block;margin:64px 0 20px;font-size:12px;letter-spacing:.08em}
+.soc{display:flex;gap:22px}.soc svg{width:30px;height:30px;fill:#fff}
+@media(max-width:720px){.two,.cols,.cards{grid-template-columns:1fr}.two{gap:48px}.cols{gap:60px}.cards{gap:72px}.row{grid-template-columns:84px 1fr;margin-bottom:52px}.nav ul{gap:16px;font-size:13px}.nav ul li:nth-child(2),.nav ul li:nth-child(3){display:none}.hero{padding:150px 20px 160px}.about{padding:120px 0}section.pad,.work,.reach{padding-top:110px;padding-bottom:110px}.skills h2,.work h2{margin-bottom:56px}}
+</style></head><body>
+<nav class="nav"><a class="logo" href="#top"><i></i><span>Maryam Sherif</span></a>
+<ul><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li></ul>
+<a href="#contact" aria-label="Contact"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2z" fill="none" stroke="#000" stroke-width="2"/><path d="M2 6l10 8 10-8" fill="none" stroke="#000" stroke-width="2"/></svg></a></nav>
+<div class="page" id="top">
+<header class="hero"><h1>Maryam Sherif</h1><p>BIS Graduate</p><a class="btn" href="https://studentaast-my.sharepoint.com/:w:/g/personal/m_bakhaty01201_student_aast_edu/IQBibIgoRyzBTYRpEoPSDwLgAbKPNS-G44_BDpFJIKVklmw?e=6dMIl2" target="_blank" rel="noopener">My CV</a></header>
+<section class="about" id="about"><div class="blob b1"></div><div class="blob b2"></div><div class="in"><h2>About Me</h2>
+<p>Business Information Systems degree from AAST (GPA 3.50) and hands-on experience building e-commerce interfaces with JavaScript, React, TypeScript, HTML5, and CSS. Built StyleHub, a React marketplace for local fashion brands. Comfortable with responsive design, interactive features such as category filtering and carousels, Git and GitHub, and working with teams and clients. Ready to apply my e-commerce front-end experience to Shopify themes, keeps skills current by following senior developers and technology leaders and by scheduling regular time to learn new tools. I am skilled in developing plans, managing projects, and user documentation.</p></div></section>
+<section class="pad two" id="experience"><h2>Experience<br>&amp; Education</h2><div>
+<div class="row"><b>2025</b><div><h3>Web Developer Intern</h3><small>Suez Canal Authority</small><p>Built and styled responsive web pages with HTML5, CSS, Bootstrap, and JavaScript, working closely with the internal team to turn requirements into finished deliverables.</p></div></div>
+<div class="row"><b>2026 –<br>2022</b><div><h3>Business Information Systems</h3><small>AAST · College of Management &amp; Technology<br>GPA 3.50</small><p>Coursework: SAP ERP, Business Intelligence, Data Mining &amp; Prescriptive Analytics, Decision Support Systems, Big Data &amp; Cloud Computing, Digital Marketing, UX/UI Principles.</p></div></div></div></section>
+<section class="pad skills" id="skills"><div class="pre">What I work with</div><h2>Skills &amp;<br>Proficiencies</h2>
+<div class="cols"><div><h4>Technical Skills</h4><p>HTML5, CSS, JavaScript, React, React Native, Bootstrap, Supabase</p><p>Power BI, Google Analytics, Oracle DB, MongoDB, SPSS, Orange, RapidMiner</p><p>Figma, Photoshop, Excel, PowerPoint</p></div>
+<div><h4>Languages</h4><p>Arabic (Native)</p><div class="bar"><span style="width:100%"></span></div><p>English (Advanced)</p><div class="bar"><span style="width:80%"></span></div><p>Spanish &amp; French (Elementary)</p><div class="bar"><span style="width:30%"></span></div></div></div></section>
+<section class="work" id="projects"><h2>Projects</h2><div class="cards">
+<div><div class="shot"><img src="assets/stylehub.jpg" alt="StyleHub homepage"></div><h3>StyleHub</h3><p>BIS graduation project built with a team of 5: a React marketplace bringing local Egyptian fashion brands together, with brand pages, category filtering and a hero carousel.</p><a href="https://github.com/stylehub-project2026/stylehub-frontend.git" target="_blank" rel="noopener">View code</a><a href="https://stylehub-frontend.vercel.app/" target="_blank" rel="noopener">Live demo</a></div>
+<div><div class="shot"><img src="assets/shopnow.jpg" alt="ShopNow app screens"></div><h3>ShopNow</h3><p>Mobile Commerce course project (Scenario A, Shop App) at AAST. A React Native (Expo) app with TypeScript, Supabase and Zustand: product browsing, live stock, a store locator, barcode scanning, order history and dark/light themes.</p><a href="https://github.com/mariam123sherif/Shop_App" target="_blank" rel="noopener">View code</a></div></div></section>
+<section class="reach" id="contact"><h2>Reach out</h2><h3>Maryam Sherif</h3><p><a href="mailto:maryam.sherif1022@gmail.com">maryam.sherif1022@gmail.com</a></p><p>+20 101 631 5757 · Alexandria, Egypt</p><small>CONNECT WITH ME</small>
+<div class="soc"><a href="https://www.linkedin.com/in/maryam-sherif-7865b525b" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+<a href="https://github.com/mariam123sherif" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.38-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/></svg></a></div></section>
+</div></body></html>
